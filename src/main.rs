@@ -1,3 +1,6 @@
+use std::{cell::RefCell, rc::Rc};
+
+mod balanced_binary_tree_12;
 mod best_time_to_buy_and_sell_stock_04;
 mod binary_search_08;
 mod flood_fill_09;
@@ -17,6 +20,24 @@ fn main() {
 }
 
 pub struct Solution {}
+
+#[derive(Debug, PartialEq, Eq)]
+pub struct TreeNode {
+    pub val: i32,
+    pub left: Option<Rc<RefCell<TreeNode>>>,
+    pub right: Option<Rc<RefCell<TreeNode>>>,
+}
+
+impl TreeNode {
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        TreeNode {
+            val,
+            left: None,
+            right: None,
+        }
+    }
+}
 
 impl Solution {
     pub fn longest_alternating_subarray(nums: Vec<i32>, threshold: i32) -> i32 {
