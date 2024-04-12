@@ -3,6 +3,7 @@ mod binary_search_08;
 mod flood_fill_09;
 mod invert_binary_tree_06;
 mod is_anagram_07;
+mod lowest_common_ancestor_of_a_binary_search_tree_11;
 mod maximum_subarray_10;
 mod merge_two_sorted_list_03;
 mod two_sum_01;
